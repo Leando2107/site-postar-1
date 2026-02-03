@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Você, Minha Flor 🌸</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+
+<style>
+/* Modal */
+.modal {
+  display: none;
+}
+.modal.active {
+  display: flex;
+}
+</style>
+</head>
+
+<body class="bg-pink-50">
+
+<!-- NAVBAR -->
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-pink-600">💖 Para meu Amor</h1>
+    <nav class="space-x-4">
+      <a href="#love-letters" class="text-pink-600 hover:underline">Cartas</a>
+      <a href="#memories" class="text-pink-600 hover:underline">Memórias</a>
+      <a href="#countdown" class="text-pink-600 hover:underline">Encontro</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container mx-auto px-4 py-10">
+
+<!-- HERO -->
+<section class="text-center py-16">
+  <h2 class="text-5xl font-bold text-pink-600 mb-6">Para Você, Minha Flor 🌸</h2>
+  <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+    Criei este cantinho para te lembrar, todos os dias, do quanto você é especial pra mim.
+  </p>
+</section>
+
+<!-- CARTAS -->
+<section id="love-letters" class="py-12">
+<h3 class="text-3xl font-bold text-center text-pink-600 mb-10">Cartas de Amor 💌</h3>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+  <h4 class="text-xl font-semibold text-pink-600 mb-2">Quando Te Conheci</h4>
+  <p class="text-gray-600 mb-4">A primeira vez que te vi, algo mudou em mim...</p>
+  <button onclick="openModal('modal1')" class="text-pink-500 font-medium">Ler mais</button>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+  <h4 class="text-xl font-semibold text-pink-600 mb-2">Você Ilumina Meus Dias</h4>
+  <p class="text-gray-600 mb-4">Seu sorriso tem o poder de mudar tudo...</p>
+  <button onclick="openModal('modal2')" class="text-pink-500 font-medium">Ler mais</button>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+  <h4 class="text-xl font-semibold text-pink-600 mb-2">Sonhando com Você</h4>
+  <p class="text-gray-600 mb-4">Mesmo longe, você mora no meu coração...</p>
+  <button onclick="openModal('modal3')" class="text-pink-500 font-medium">Ler mais</button>
+</div>
+
+</div>
+</section>
+
+<!-- MEMÓRIAS -->
+<section id="memories" class="py-12 bg-pink-100 rounded-xl px-6">
+<h3 class="text-3xl font-bold text-center text-pink-600 mb-8">Nossas Memórias 📸</h3>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<img src="https://picsum.photos/400?1" class="rounded-lg shadow">
+<img src="https://picsum.photos/400?2" class="rounded-lg shadow">
+<img src="https://picsum.photos/400?3" class="rounded-lg shadow">
+<img src="https://picsum.photos/400?4" class="rounded-lg shadow">
+</div>
+</section>
+
+<!-- CONTAGEM -->
+<section id="countdown" class="py-12">
+<h3 class="text-3xl font-bold text-center text-pink-600 mb-6">Nosso Próximo Encontro ⏳</h3>
+
+<div class="bg-white rounded-xl shadow p-6 max-w-xl mx-auto">
+<div class="grid grid-cols-4 gap-4 text-center">
+  <div><div id="days" class="text-3xl font-bold text-pink-600">0</div>Dias</div>
+  <div><div id="hours" class="text-3xl font-bold text-pink-600">0</div>Horas</div>
+  <div><div id="minutes" class="text-3xl font-bold text-pink-600">0</div>Min</div>
+  <div><div id="seconds" class="text-3xl font-bold text-pink-600">0</div>Seg</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white text-center py-6 mt-10 shadow-inner">
+<p class="text-gray-600">Feito com amor 💖 por você</p>
+</footer>
+
+<!-- MODAIS -->
+<div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center">
+<div class="bg-white p-6 rounded-xl max-w-md">
+<h3 class="text-xl font-bold text-pink-600 mb-4">Quando Te Conheci</h3>
+<p class="text-gray-700 mb-4">
+Desde o primeiro olhar, eu soube que você seria alguém importante. E hoje tenho certeza: você é tudo.
+</p>
+<button onclick="closeModal('modal1')" class="text-pink-500">Fechar</button>
+</div>
+</div>
+
+<div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center">
+<div class="bg-white p-6 rounded-xl max-w-md">
+<h3 class="text-xl font-bold text-pink-600 mb-4">Você Ilumina Meus Dias</h3>
+<p class="text-gray-700 mb-4">
+Seu sorriso é meu lugar seguro. É onde tudo faz sentido.
+</p>
+<button onclick="closeModal('modal2')" class="text-pink-500">Fechar</button>
+</div>
+</div>
+
+<div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center">
+<div class="bg-white p-6 rounded-xl max-w-md">
+<h3 class="text-xl font-bold text-pink-600 mb-4">Sonhando com Você</h3>
+<p class="text-gray-700 mb-4">
+Eu sonho com nossos planos, nossos risos e nossa vida juntos.
+</p>
+<button onclick="closeModal('modal3')" class="text-pink-500">Fechar</button>
+</div>
+</div>
+
+<script>
+feather.replace();
+
+/* MODAL */
+function openModal(id){ document.getElementById(id).classList.add('active'); }
+function closeModal(id){ document.getElementById(id).classList.remove('active'); }
+
+/* CONTAGEM REGRESSIVA */
+const targetDate = new Date("2026-02-14T20:00:00").getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = targetDate - now;
+
+  document.getElementById("days").innerText = Math.floor(diff / (1000*60*60*24));
+  document.getElementById("hours").innerText = Math.floor((diff / (1000*60*60)) % 24);
+  document.getElementById("minutes").innerText = Math.floor((diff / (1000*60)) % 60);
+  document.getElementById("seconds").innerText = Math.floor((diff / 1000) % 60);
+}, 1000);
+</script>
+
+</body>
+</html>
